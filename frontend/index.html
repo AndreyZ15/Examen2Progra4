@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventario</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <button type="button" class="btn btn-logout" onclick="cerrarSesion()">Cerrar Sesión</button>
+  <h1>Bienvenido al Inventario</h1>
+  <div class="container">
+    <div class="button-container">
+      <button type="button" class="btn btn-primary" onclick="window.location.href='agregar.html'">Agregar Producto</button>
+    </div>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Buscar por nombre..." />
+      <button type="button" class="btn btn-primary" onclick="buscarProducto()">Buscar</button>
+    </div>
+    <div id="listaProductos">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Fecha Registro</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaProductos"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
